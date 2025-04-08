@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+.spline-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.vertical-timeline-element-content {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.vertical-timeline-element-content:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+.vertical-timeline-element-content img {
+  transition: transform 0.3s ease;
+}
+
+.vertical-timeline-element-content:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1169px) {
+  .vertical-timeline-element-content {
+    @apply mx-4;
+  }
+}
